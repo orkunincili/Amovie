@@ -1,0 +1,111 @@
+
+.backdrop{
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+
+
+}
+.movie-detail-container{
+    background: none;
+    height: 100vh;
+    position: relative;
+
+}
+.title{
+  font-size:3em;
+  border-bottom:1px solid #AAAAAA;
+}
+.movie-infos{
+
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  float:right;
+
+
+}
+.subtext{
+  width: 60%;
+  display: flex;
+  flex-wrap:wrap;
+  padding:0.5rem;
+  justify-content: space-evenly;
+  align-items:baseline;
+
+
+}
+.movie-infos p{
+  padding:0.5rem;
+  line-height:25px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+
+.poster{
+
+  height: 100vh;
+  width: 30%;
+  float: left;
+  display: block;
+  text-align: center;
+
+}
+
+.poster img{
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30%;
+
+
+}
+.shadow{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+
+}
+.icons{
+  width: 100%;
+  display: flex;
+
+
+}
+.icons div{
+  margin-left: 1rem;
+
+}
+.icons div:nth-of-type(2){
+  color:yellow;
+}
+
+.tagline{
+    position: absolute;
+    top: 4rem ;
+    text-align: left;
+    color:#AAAAAA;
+}
+
+.add-button{
+  background: #000;
+  opacity: 0.8;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border:none;
+  color:#AAAAAA;
+  margin-left: 1rem;
+}
+.add-button:hover{
+  color:black;
+  background: rgba(255,255,255,0.4);
+
+}

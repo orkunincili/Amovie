@@ -1,0 +1,47 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.backdrop-poster{
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  display: inline;
+  position: relative;
+
+}
+img{
+  width: 100%;
+  height: 80vh;
+
+
+}
+.shadow{
+  height:10rem;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(14,14,14,0.61),
+    #141414);
+
+}
+.newest-info{
+  position: absolute;
+  bottom:20%;
+  height: auto;
+  text-align: center;
+  padding: 1.5rem;
+
+
+}
+.newest-buttons button{
+  background: rgba(255,255,255,0.6);
+  padding:0.7rem;
+  margin:1rem;
+  border:none;
+  border-radius: 5px;
+  font-weight: bold;
+}
