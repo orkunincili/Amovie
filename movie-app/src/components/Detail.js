@@ -15,8 +15,8 @@ function Detail (props) {
 
   const getMovie = async (id) =>{
     try{
-      const data = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=API_KEY`);
-      setMovie(data.data)[]
+      const data = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=8b4b0174722bbea08c34b312c86a7586`);
+      setMovie(data.data)
       console.log(data.data);
     }catch(e){
       console.log(e)
@@ -45,7 +45,7 @@ function Detail (props) {
 
     movie.genres.map(genre=>(
       m['genres'].push(genre['id']),
-      axios.post(`http://127.0.0.1:8000/api/genres`, genre)
+      axios.post(`http://127.0.0.1:8080/api/genres/`, genre)
         .then(res => {
             console.log(res.data);
 
@@ -55,9 +55,10 @@ function Detail (props) {
 
 
 
-    axios.post(`http://127.0.0.1:8000/api/movies/`, m)
+    axios.post(`http://127.0.0.1:8080/api/movies/`, m)
       .then(res => {
           console.log(res.data);
+          console.log(m)
 
       })
 

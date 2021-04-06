@@ -23,21 +23,8 @@ class MovieViewSet(ModelViewSet):
         return Response(serializer.data)
 
 
-@api_view(["GET"])
-def genreList(request):
+class GenreViewSet(ModelViewSet):
 
-    queryset=Genre.objects.all()
-    serializer=GenreSerializer(queryset,many=True)
-
-    return Response(serializer.data)
-
-@api_view(["POST"])
-def createGenre(request):
-    try:
-        Genre.objects.get(id=request.data['id'])
-        return Response({"message":"This genre already exists"})
-    except:
-        Genre.objects.create(id=request.data['id'], name=request.data['name'])
-
-        return Response({"message":"Created"})
-
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+    

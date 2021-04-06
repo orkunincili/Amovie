@@ -38,14 +38,14 @@ const Movie = ({title,poster_path,overview,vote_average,id,},props) =>{
     data.data.genres.map(genre=>(
       m['genres'].push(genre['id']),
       console.log(genre),
-      axios.post(`http://127.0.0.1:8000/api/genre`, genre)
+      axios.post(`http://127.0.0.1:8080/api/genres/`, genre)
         .then(res => {
             console.log(res.data);
 
         })
 
     ))
-    axios.post(`http://127.0.0.1:8000/api/movies/`, m)
+    axios.post(`http://127.0.0.1:8080/api/movies/`, m)
       .then(res=>{
         console.log(res.data)
       })
